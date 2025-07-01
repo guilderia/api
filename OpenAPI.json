@@ -12401,10 +12401,10 @@
   },
   "externalDocs": {
     "description": "Revolt Developer Documentation",
-    "url": "https://developers.revolt.chat"
+    "url": "https://developer.guilderia.com"
   },
   "x-logo": {
-    "url": "https://revolt.chat/header.png",
+    "url": "https://guilderia.com/header.png",
     "altText": "Revolt Header"
   },
   "x-tagGroups": [
