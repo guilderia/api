@@ -54,7 +54,7 @@ export function getPathName(anyPath: string) {
  */
 export interface Options {
   /**
-   * Base URL of the Revolt node
+   * Base URL of the Guilderia node
    */
   baseURL: string;
   /**
@@ -66,7 +66,7 @@ export interface Options {
    */
   authentication: {
     rauth?: string | undefined;
-    revolt?: { token: string } | string | undefined;
+    guilderia?: { token: string } | string | undefined;
     headers?: Record<string, any>;
   };
 }
@@ -113,16 +113,16 @@ export class API {
           "X-Session-Token": this.authentication.rauth,
         };
       }
-    } else if (this.authentication.revolt) {
-      switch (typeof this.authentication.revolt) {
+    } else if (this.authentication.guilderia) {
+      switch (typeof this.authentication.guilderia) {
         case "string": {
           return {
-            "X-Bot-Token": this.authentication.revolt,
+            "X-Bot-Token": this.authentication.guilderia,
           };
         }
         case "object": {
           return {
-            "X-Session-Token": this.authentication.revolt.token,
+            "X-Session-Token": this.authentication.guilderia.token,
           };
         }
       }
