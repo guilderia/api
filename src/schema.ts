@@ -469,11 +469,11 @@ export interface paths {
 export interface components {
   schemas: {
     /** Server Configuration */
-    RevoltConfig: {
-      /** @description Revolt API Version */
-      revolt: string;
-      /** @description Features enabled on this Revolt node */
-      features: components["schemas"]["RevoltFeatures"];
+    GuilderiaConfig: {
+      /** @description Guilderia API Version */
+      guilderia: string;
+      /** @description Features enabled on this guilderia node */
+      features: components["schemas"]["GuilderiaFeatures"];
       /** @description WebSocket URL */
       ws: string;
       /** @description URL pointing to the client serving this node */
@@ -484,7 +484,7 @@ export interface components {
       build: components["schemas"]["BuildInformation"];
     };
     /** Feature Configuration */
-    RevoltFeatures: {
+    GuilderiaFeatures: {
       /** @description hCaptcha configuration */
       captcha: components["schemas"]["CaptchaFeature"];
       /** @description Whether email verification is enabled */
@@ -2718,7 +2718,7 @@ export interface operations {
     responses: {
       200: {
         content: {
-          "application/json": components["schemas"]["RevoltConfig"];
+          "application/json": components["schemas"]["GuilderiaConfig"];
         };
       };
       /** An error occurred. */
